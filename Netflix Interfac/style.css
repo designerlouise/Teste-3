@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #141414;
+    color: white;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    padding: 1rem 2rem;
+}
+
+header h1 {
+    color: #E50914;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+button {
+    background: #E50914;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.painel-cards, section {
+    padding: 2rem;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.card {
+    background: #333;
+    padding: 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    font-weight: bold;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    background: #E50914;
+}
+
+.placeholder {
+    border: 2px dashed #E50914;
+    padding: 2rem;
+    background: #1c1c1c;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Modal Login */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #000;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 300px;
+    position: relative;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    right: 10px; top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.avatar-selection img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.avatar-selection img:hover {
+    transform: scale(1.2);
+}
+
+#avatarPreview img {
+    width: 80px;
+    border-radius: 50%;
+    margin-top: 1rem;
+}
+
+/* Loader estilo Netflix */
+#loader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    animation: fadeOut 2s forwards 3s;
+}
+
+#loader h1 {
+    font-size: 3rem;
+    color: #E50914;
+    animation: pulse 1s infinite;
+}
+
+#loader h1 span {
+    color: white;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeOut {
+    to { opacity: 0; visibility: hidden; }
+}
+
+/* Efeito de entrada */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
