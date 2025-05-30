@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LouiseFlix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loader animado estilo Netflix -->
+    <div id="loader">
+        <h1>Louise<span>Flix</span></h1>
+    </div>
+
+    <!-- Painel superior -->
+    <header class="fade-in">
+        <h1>LouiseFlix</h1>
+        <nav>
+            <ul>
+                <li><a href="#quem-sou-eu">Quem sou eu</a></li>
+                <li><a href="#como-ajudo">Como posso ajudar</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#solucoes">Soluções</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <button id="openLogin">Entrar</button>
+    </header>
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login - LouiseFlix</h2>
+            <form>
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Telefone/Whatsapp" required>
+                
+                <label>Escolha seu avatar:</label>
+                <div class="avatar-selection">
+                    <img src="https://i.pravatar.cc/100?img=1" onclick="selectAvatar(this)">
+                    <img src="https://i.pravatar.cc/100?img=2" onclick="selectAvatar(this)">
+                    <img src="https://i.pravatar.cc/100?img=3" onclick="selectAvatar(this)">
+                    <img src="https://i.pravatar.cc/100?img=4" onclick="selectAvatar(this)">
+                </div>
+                <div id="avatarPreview"></div>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Painel de escolha estilo Netflix -->
+    <section class="painel-cards fade-in">
+        <h2>Escolha uma seção</h2>
+        <div class="cards">
+            <div class="card" onclick="scrollToSection('quem-sou-eu')">Quem sou eu</div>
+            <div class="card" onclick="scrollToSection('como-ajudo')">Como posso ajudar</div>
+            <div class="card" onclick="scrollToSection('servicos')">Serviços</div>
+            <div class="card" onclick="scrollToSection('depoimentos')">Depoimentos</div>
+            <div class="card" onclick="scrollToSection('solucoes')">Soluções</div>
+            <div class="card" onclick="scrollToSection('contato')">Contato</div>
+        </div>
+    </section>
+
+    <!-- Seções -->
+    <section id="quem-sou-eu" class="fade-in">
+        <h2>Quem sou eu</h2>
+        <div class="placeholder">[Insira aqui sua foto e biografia]</div>
+    </section>
+
+    <section id="como-ajudo" class="fade-in">
+        <h2>Como posso ajudar sua empresa</h2>
+        <div class="placeholder">[Descrição dos serviços]</div>
+    </section>
+
+    <section id="servicos" class="fade-in">
+        <h2>Como meus serviços vão te ajudar</h2>
+        <div class="placeholder">[Infográficos ou textos]</div>
+    </section>
+
+    <section id="depoimentos" class="fade-in">
+        <h2>Depoimentos de clientes</h2>
+        <div class="placeholder">[Slides ou carrossel de depoimentos]</div>
+    </section>
+
+    <section id="solucoes" class="fade-in">
+        <h2>Soluções Estratégicas</h2>
+        <div class="placeholder">[Cards ou descrições de soluções]</div>
+    </section>
+
+    <section id="contato" class="fade-in">
+        <h2>Contato</h2>
+        <form>
+            <input type="text" placeholder="Seu nome">
+            <input type="email" placeholder="Seu email">
+            <textarea placeholder="Sua mensagem"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <section id="video-institucional" class="fade-in">
+        <h2>Vídeo Institucional</h2>
+        <div class="placeholder">[Espaço para embedar vídeo]</div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
